@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "WhatsApp Lite",
+  "version": "0.1.0",
+  "identifier": "com.orbitratech.whatsapplite",
+  "build": {
+    "frontendDist": "../frontend"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "csp": null,
+      "capabilities": ["whatsapp-remote"]
+    },
+    "windows": []
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "dmg", "deb", "rpm"],
+    "category": "SocialNetworking",
+    "shortDescription": "A lightweight WhatsApp Web desktop wrapper",
+    "longDescription": "A Tauri desktop wrapper for WhatsApp Web with tray controls, native notifications, and a persistent WebView session.",
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.ico",
+      "icons/icon.icns"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper",
+        "silent": true
+      }
+    }
+  }
+}

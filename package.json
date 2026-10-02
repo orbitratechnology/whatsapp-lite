@@ -1,0 +1,19 @@
+{
+  "name": "whatsapp-lite-tauri",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "check:config": "node scripts/check-config.mjs",
+    "test:bridge": "node scripts/test-notification-bridge.mjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

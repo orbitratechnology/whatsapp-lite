@@ -1,0 +1,19 @@
+{
+  "$schema": "../gen/schemas/remote-schema.json",
+  "identifier": "whatsapp-remote",
+  "description": "Allow the WhatsApp Web origin only the Tauri APIs needed for native notifications and notification-click restore.",
+  "windows": ["main"],
+  "remote": {
+    "urls": ["https://web.whatsapp.com"]
+  },
+  "platforms": ["linux", "macOS", "windows"],
+  "permissions": [
+    "notification:allow-is-permission-granted",
+    "notification:allow-request-permission",
+    "notification:allow-notify",
+    "notification:allow-register-listener",
+    "core:window:allow-unminimize",
+    "core:window:allow-show",
+    "core:window:allow-set-focus"
+  ]
+}
